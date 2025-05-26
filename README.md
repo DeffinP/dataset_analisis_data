@@ -204,37 +204,30 @@ Pada tahap evaluasi ini, kinerja model yang telah dilatih diukur menggunakan met
 
 - **Penjelasan:** MSE mengukur rata-rata dari kuadrat perbedaan antara nilai prediksi ($\hat{y_i}$) dan nilai aktual ($y_i$). Metrik ini memberikan bobot yang lebih besar pada kesalahan prediksi yang besar karena adanya pengkuadratan, sehingga sensitif terhadap *outlier*.
 - **Formula:**  
-  $$
-  \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2
-  $$
+MSE = (1/n) × Σ(yᵢ − ŷᵢ)²
 - **Cara Kerja:** Semakin kecil nilai MSE, semakin baik model dalam memprediksi nilai aktual, karena menunjukkan rata-rata kesalahan kuadrat yang lebih rendah.
 
 #### b. Root Mean Squared Error (RMSE)
 
 - **Penjelasan:** RMSE adalah akar kuadrat dari MSE. Metrik ini sangat populer karena menghasilkan unit yang sama dengan variabel target (harga Bitcoin), sehingga lebih mudah diinterpretasikan dibandingkan MSE. Seperti MSE, RMSE juga sensitif terhadap *outlier*.
 - **Formula:**  
-  $$
-  \text{RMSE} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2 }
-  $$
+RMSE = √[ (1/n) × Σ(yᵢ − ŷᵢ)² ]
 - **Cara Kerja:** Semakin kecil nilai RMSE, semakin akurat model dalam memprediksi harga Bitcoin.
 
 #### c. Mean Absolute Error (MAE)
 
 - **Penjelasan:** MAE mengukur rata-rata dari nilai absolut perbedaan antara nilai prediksi ($\hat{y_i}$) dan nilai aktual ($y_i$). Berbeda dengan MSE dan RMSE, MAE tidak mengkuadratkan kesalahan, sehingga kurang sensitif terhadap *outlier*.
 - **Formula:**  
-  $$
-  \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y_i}|
-  $$
+MAE = (1/n) × Σ|yᵢ − ŷᵢ|
 - **Cara Kerja:** Semakin kecil nilai MAE, semakin baik model. MAE memberikan gambaran langsung tentang rata-rata besar kesalahan prediksi dalam unit target.
 
 #### d. R-squared (R²)
 
 - **Penjelasan:** R², atau koefisien determinasi, mengukur proporsi varians dalam variabel dependen (harga penutupan Bitcoin) yang dapat dijelaskan oleh model regresi. Nilainya berkisar dari 0 hingga 1 (atau bisa negatif jika model sangat buruk).
 - **Formula:**  
-  $$
-  R^2 = 1 - \frac{ \sum_{i=1}^{n} (y_i - \hat{y_i})^2 }{ \sum_{i=1}^{n} (y_i - \bar{y})^2 }
-  $$
-  Di mana $\bar{y}$ adalah rata-rata nilai aktual.
+R² = 1 − [ Σ(yᵢ − ŷᵢ)² / Σ(yᵢ − ȳ)² ]
+
+Di mana ȳ adalah rata-rata dari nilai aktual (yᵢ).
 - **Cara Kerja:** Nilai R² yang mendekati 1 menunjukkan bahwa model sangat baik dalam menjelaskan variasi data target.
 
 ---
