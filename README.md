@@ -225,7 +225,12 @@ MAE = (1/n) × Σ|yᵢ − ŷᵢ|
 
 - **Penjelasan:** R², atau koefisien determinasi, mengukur proporsi varians dalam variabel dependen (harga penutupan Bitcoin) yang dapat dijelaskan oleh model regresi. Nilainya berkisar dari 0 hingga 1 (atau bisa negatif jika model sangat buruk).
 - **Formula:**  
+<div align="center">
+
 R² = 1 − [ Σ(yᵢ − ŷᵢ)² / Σ(yᵢ − ȳ)² ]
+
+</div>
+
 
 Di mana ȳ adalah rata-rata dari nilai aktual (yᵢ).
 - **Cara Kerja:** Nilai R² yang mendekati 1 menunjukkan bahwa model sangat baik dalam menjelaskan variasi data target.
