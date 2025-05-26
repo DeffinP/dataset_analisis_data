@@ -204,35 +204,53 @@ Pada tahap evaluasi ini, kinerja model yang telah dilatih diukur menggunakan met
 
 - **Penjelasan:** MSE mengukur rata-rata dari kuadrat perbedaan antara nilai prediksi ($\hat{y_i}$) dan nilai aktual ($y_i$). Metrik ini memberikan bobot yang lebih besar pada kesalahan prediksi yang besar karena adanya pengkuadratan, sehingga sensitif terhadap *outlier*.
 - **Formula:**  
-MSE = (1/n) × Σ(yᵢ − ŷᵢ)²
+
+<div align="center">
+
+**MSE = (1/n) × Σ(yᵢ − ŷᵢ)²**
+
+</div>
+
 - **Cara Kerja:** Semakin kecil nilai MSE, semakin baik model dalam memprediksi nilai aktual, karena menunjukkan rata-rata kesalahan kuadrat yang lebih rendah.
 
 #### b. Root Mean Squared Error (RMSE)
 
 - **Penjelasan:** RMSE adalah akar kuadrat dari MSE. Metrik ini sangat populer karena menghasilkan unit yang sama dengan variabel target (harga Bitcoin), sehingga lebih mudah diinterpretasikan dibandingkan MSE. Seperti MSE, RMSE juga sensitif terhadap *outlier*.
 - **Formula:**  
-RMSE = √[ (1/n) × Σ(yᵢ − ŷᵢ)² ]
+
+<div align="center">
+
+**RMSE = √[ (1/n) × Σ(yᵢ − ŷᵢ)² ]**
+
+</div>
+
 - **Cara Kerja:** Semakin kecil nilai RMSE, semakin akurat model dalam memprediksi harga Bitcoin.
 
 #### c. Mean Absolute Error (MAE)
 
 - **Penjelasan:** MAE mengukur rata-rata dari nilai absolut perbedaan antara nilai prediksi ($\hat{y_i}$) dan nilai aktual ($y_i$). Berbeda dengan MSE dan RMSE, MAE tidak mengkuadratkan kesalahan, sehingga kurang sensitif terhadap *outlier*.
 - **Formula:**  
-MAE = (1/n) × Σ|yᵢ − ŷᵢ|
+
+<div align="center">
+
+**MAE = (1/n) × Σ|yᵢ − ŷᵢ|**
+
+</div>
+
 - **Cara Kerja:** Semakin kecil nilai MAE, semakin baik model. MAE memberikan gambaran langsung tentang rata-rata besar kesalahan prediksi dalam unit target.
 
 #### d. R-squared (R²)
 
 - **Penjelasan:** R², atau koefisien determinasi, mengukur proporsi varians dalam variabel dependen (harga penutupan Bitcoin) yang dapat dijelaskan oleh model regresi. Nilainya berkisar dari 0 hingga 1 (atau bisa negatif jika model sangat buruk).
 - **Formula:**  
+
 <div align="center">
 
-R² = 1 − [ Σ(yᵢ − ŷᵢ)² / Σ(yᵢ − ȳ)² ]
+**R² = 1 − [ Σ(yᵢ − ŷᵢ)² / Σ(yᵢ − ȳ)² ]**
 
 </div>
 
-
-Di mana ȳ adalah rata-rata dari nilai aktual (yᵢ).
+- Di mana ȳ adalah rata-rata dari nilai aktual (yᵢ).
 - **Cara Kerja:** Nilai R² yang mendekati 1 menunjukkan bahwa model sangat baik dalam menjelaskan variasi data target.
 
 ---
