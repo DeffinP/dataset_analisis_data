@@ -41,31 +41,64 @@ Kemampuan untuk memprediksi pergerakan harga Bitcoin memiliki implikasi besar ba
 4.  Memilih model terbaik berdasarkan metrik evaluasi dan menginterpretasikan hasil prediksi secara visual melalui grafik aktual vs prediksi.
 ----------
 
-## Data Understanding
+Data Understanding
 
-Data yang digunakan dalam proyek ini adalah **riwayat harga Bitcoin (BTC-USD)** yang diambil dari **Yahoo Finance** melalui library **yfinance** di Python. Dataset ini mencakup informasi harga harian Bitcoin selama periode waktu dari **01 Januari 2016** hingga **25 Mei 2025**, serta : 
-1. **Date**: Tanggal pencatatan data harga (format: YYYY-MM-DD).
-2. **Close**: Harga penutupan Bitcoin pada tanggal tersebut. Ini adalah variabel target yang akan diprediksi oleh model.
-3. **High**: Harga tertinggi Bitcoin yang dicapai pada tanggal tersebut.
-4. **Low**: Harga terendah Bitcoin yang dicapai pada tanggal tersebut.
-5. **Open**: Harga pembukaan Bitcoin pada tanggal tersebut.
-6. **Volume**: Total volume perdagangan Bitcoin pada tanggal tersebut, menunjukkan jumlah unit Bitcoin yang diperdagangkan.
+Data yang digunakan dalam proyek ini adalah riwayat harga harian Bitcoin (BTC-USD) yang diambil dari situs Yahoo Finance menggunakan library yfinance di Python. Dataset mencakup periode waktu dari 01 Januari 2016 hingga 25 Mei 2025.
 
-Contoh Pengambilan Data: 
+URL/Tautan Sumber Data
 
-    import yfinance as yf
-    df = yf.download("BTC-USD", start="2016-01-01", end="2025-05-26")
-    
-### Exploratory Data Analysis
+Data diambil secara langsung melalui API Yahoo Finance menggunakan yfinance, dengan kode berikut:
 
--   Visualisasi tren harga penutupan 
-    
--   Visualisasi moving average (MA7, MA30) 
-    
--   Log Return Harian Harga BTC
-    
--   Korelasi Antar Fitur
-----------
+import yfinance as yf
+df = yf.download("BTC-USD", start="2016-01-01", end="2025-05-26")
+
+Jumlah Baris dan Kolom
+
+Dataset terdiri dari:
+
+3433 baris (observasi harian)
+
+6 kolom fitur
+
+Kondisi Data
+
+Missing Value: Tidak ditemukan missing value pada seluruh kolom (Date, Close, High, Low, Open, Volume).
+
+Data Duplikat: Tidak ditemukan data duplikat karena data diambil secara harian dan unik berdasarkan tanggal.
+
+Outlier: Terdapat nilai ekstrem pada kolom harga dan volume yang masih wajar mengingat volatilitas tinggi pasar kripto.
+
+Tipe Data:
+
+Date: object (perlu dikonversi ke datetime jika digunakan dalam analisis waktu)
+
+Close, High, Low, Open: float64
+
+Volume: int64
+
+Uraian Fitur
+
+Date: Tanggal pencatatan harga Bitcoin (format: YYYY-MM-DD).
+
+Close: Harga penutupan Bitcoin pada tanggal tersebut. Merupakan target variabel dalam pemodelan prediksi.
+
+High: Harga tertinggi yang dicapai Bitcoin pada hari tersebut.
+
+Low: Harga terendah yang dicapai Bitcoin pada hari tersebut.
+
+Open: Harga pembukaan Bitcoin pada awal hari.
+
+Volume: Jumlah unit Bitcoin yang diperdagangkan dalam satu hari. Ini adalah volume transaksi, bukan hasil dari jumlah total koin beredar × harga.
+
+Exploratory Data Analysis
+
+Visualisasi tren harga penutupan
+
+Visualisasi moving average (MA7, MA30)
+
+Log Return Harian Harga BTC
+
+Korelasi Antar Fitur
 
 ## Data Preparation
 
