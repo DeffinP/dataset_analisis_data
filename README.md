@@ -287,28 +287,28 @@ Berikut adalah hasil evaluasi kedua model (LSTM dan GRU) pada _testing set_ sete
 
 ```
 Evaluasi Model pada Data Tes:
-Mean Squared Error (MSE): 6061932.40
-Root Mean Squared Error (RMSE): 2462.10
-Mean Absolute Error (MAE): 1774.98
-R-squared (R2): 0.9893
+Mean Squared Error (MSE): 9722508.54
+Root Mean Squared Error (RMSE): 3118.09
+Mean Absolute Error (MAE): 2378.18
+R-squared (R2): 0.9829
 
 ```
 **b. Model GRU:**
 
 ```
 Evaluasi Model pada Data Tes:
-Mean Squared Error (MSE): 3697483.18
-Root Mean Squared Error (RMSE): 1922.88
-Mean Absolute Error (MAE): 1321.34
-R-squared (R2): 0.9935
+Mean Squared Error (MSE): 5869305.86
+Root Mean Squared Error (RMSE): 2422.67
+Mean Absolute Error (MAE): 1834.91
+R-squared (R2): 0.9897
 ```
 ### 3. Interpretasi Hasil dan Pemilihan Model Terbaik
 
 Berdasarkan perbandingan metrik evaluasi dari kedua model:
 
--   **Kesalahan Prediksi:** Model GRU menunjukkan nilai MSE (3,697,483.18), RMSE (1,922.88), dan MAE (1,321.34) yang secara signifikan lebih rendah dibandingkan model LSTM (MSE: 6,061,932.40, RMSE: 2,462.10, MAE: 1,774.98). Ini berarti bahwa, secara rata-rata, prediksi yang dihasilkan oleh model GRU memiliki deviasi yang lebih kecil dari harga Bitcoin aktual. Dengan kata lain, model GRU menghasilkan _error_ prediksi yang lebih kecil.
+-   **Kesalahan Prediksi:** Model GRU menunjukkan nilai MSE (5,869,305.86), RMSE (2,422.67), dan MAE (1,834.91) yang secara signifikan lebih rendah dibandingkan model LSTM (MSE: 9,722,508.54, RMSE: 3,118.09, MAE: 2,378.18). Ini berarti bahwa, secara rata-rata, prediksi yang dihasilkan oleh model GRU memiliki deviasi yang lebih kecil dari harga Bitcoin aktual. Dengan kata lain, model GRU menghasilkan error prediksi yang lebih kecil.
     
--   **Kemampuan Menjelaskan Variansi Data (R2):** Model GRU mencapai nilai R2 sebesar 0.9935, yang lebih tinggi daripada model LSTM yang memiliki R2 sebesar 0.9893. Nilai R2 yang lebih tinggi pada GRU mengindikasikan bahwa model ini mampu menjelaskan sekitar 99.35% dari variasi harga Bitcoin, menunjukkan kecocokan yang sangat baik dengan data aktual. Hal ini menegaskan bahwa model GRU lebih baik dalam menangkap pola dan tren yang mendasari pergerakan harga Bitcoin.
+-   **Kemampuan Menjelaskan Variansi Data (R2):** Model GRU mencapai nilai R2 sebesar 0.9897, yang lebih tinggi daripada model LSTM yang memiliki R2 sebesar 0.9829. Nilai R2 yang lebih tinggi pada GRU mengindikasikan bahwa model ini mampu menjelaskan sekitar 98.97% dari variasi harga Bitcoin, menunjukkan kecocokan yang sangat baik dengan data aktual. Hal ini menegaskan bahwa model GRU lebih baik dalam menangkap pola dan tren yang mendasari pergerakan harga Bitcoin.
     
 
 **Kesimpulan:** Semua metrik evaluasi menunjukkan bahwa **model GRU berkinerja lebih unggul dibandingkan model LSTM** dalam memprediksi harga Bitcoin pada dataset ini. GRU menghasilkan _error_ yang lebih kecil di semua metrik berbasis kesalahan (MSE, RMSE, MAE) dan memiliki kemampuan menjelaskan variansi data yang lebih baik (R² lebih tinggi). Oleh karena itu, **Model GRU akan dipilih sebagai model terbaik** untuk memprediksi harga Bitcoin dalam proyek ini. Kemampuan GRU untuk memberikan prediksi yang lebih akurat dengan _error_ yang lebih rendah menjadikannya solusi yang lebih andal untuk membantu investor dan _trader_.
