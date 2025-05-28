@@ -82,9 +82,7 @@ Dataset terdiri dari:
 5. **Open**: Harga pembukaan Bitcoin pada awal hari.
 6. **Volume**: Jumlah unit Bitcoin yang diperdagangkan dalam satu hari. Ini adalah volume transaksi, **bukan hasil dari jumlah koin beredar dikalikan harga**.
 
----
-
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 
 - Visualisasi tren harga penutupan  
 - Visualisasi moving average (MA7, MA30)  
